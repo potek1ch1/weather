@@ -1,0 +1,25 @@
+.flex-container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container {
+  text-align: center;
+  width: 250px;
+  border: 1px solid;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 0px 30px 15px 30px;
+  background-color: rgb(250, 248, 244);
+}
+
+.prefecture-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+

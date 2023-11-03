@@ -1,0 +1,20 @@
+.pote {
+  border: 1px solid silver;
+  width: 120px;
+  height: 100px;
+  position: fixed;
+  right: 12%;
+  top: 80%;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 20px 0 rgba(113, 140, 149, 0.5);
+}
+
+img {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
