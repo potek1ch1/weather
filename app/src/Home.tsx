@@ -8,7 +8,7 @@ export default function Home() {
       <ul>
         <li><Link to={"./Current"}>現在の天気</Link></li>
         <li><Link to={"./History"}>過去の天気</Link></li>
-        <li>天気予報 ← 作成中</li>
+        <li>天気予報 ← 作成中です</li>
       </ul>
     </div>
   )
