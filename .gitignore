@@ -3,3 +3,4 @@
 /app/package-lock.json
 /app/package.json
 /app/yarn.lock
+.DS_Store
