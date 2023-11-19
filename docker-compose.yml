@@ -4,8 +4,22 @@ services:
     build: 
       context: ./app
       dockerfile: Dockerfile
+    container_name: weather-app
     volumes:
       - ./app:/app
     command: sh -c "yarn start" 
     ports:
-      - 8080:3000
+      - 3000:3000
+  
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: weather-nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./web/conf:/etc/nginx/conf.d
+      - ./web/html:/usr/share/nginx/html
+    depends_on:
+      - weather-app
