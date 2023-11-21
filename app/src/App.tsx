@@ -9,6 +9,7 @@ import HistoryDate from "./HistoryDate";
 import NoMatch from "./NoMatch";
 import Home from "./Home";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import CurrentWeather from "./CurrentWeather";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Routes> */}
           {/* <Route path="/current" Component={Current}/> */}
           <Route path="/current" element={<Current />} />
+          <Route path="/current/:pref" element={<CurrentWeather />} />
           <Route path="*" element={<NoMatch />} />
         </Routes>
       </Router>
