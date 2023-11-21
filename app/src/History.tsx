@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Components/css/forecast.css";
 import "./Components/Area";
+import SelectArea from "./Components/SelectArea";
 import Data from "./Components/prefectures.json";
-import { Outlet } from "react-router-dom";
 import {
   Link,
   useLocation,
@@ -64,44 +64,42 @@ const History = () => {
   } else {
     // return <SelectArea data={Data} />;
     // return <SelectArea data={Data} onPrefClick={handleClick} />;
-    return <SelectArea data={Data} />;
+    return <SelectArea />;
   }
 };
 
-const SelectArea = ({ data, onPrefClick }: any) => {
-  console.log(data);
-  return (
-    <div className="flex-container">
-      {data.map((area: Area) => (
-        <div key={area.area} className="container">
-          <h3>{area.area}</h3>
-          <div className="prefecture-container">
-            {area.prefectures.map((pref: Prefecture,index) => (
-              // <Link to={pref.name} onClick={() => onPrefClick(pref.name)}>
-              <div key={index} className="prefecture">
-                <Link to={pref.en} key={pref.id}>
-                  {pref.name}
-                </Link>
-              </div>
-              // <button onClick={() => onPrefClick(pref.name)}>{pref.name}</button>
-            ))}
-          </div>
-        </div>
-      ))}
-      <Outlet />
-    </div>
-  );
-};
+// const SelectArea = ({ data, onPrefClick }: any) => {
+//   console.log(data);
+//   return (
+//     <div className="flex-container">
+//       {data.map((area: Area) => (
+//         <div key={area.area} className="container">
+//           <h3>{area.area}</h3>
+//           <div className="prefecture-container">
+//             {area.prefectures.map((pref: Prefecture,index) => (
+//               // <Link to={pref.name} onClick={() => onPrefClick(pref.name)}>
+//               <div key={index} className="prefecture">
+//                 <Link to={pref.en} key={pref.id}>
+//                   {pref.name}
+//                 </Link>
+//               </div>
+//               // <button onClick={() => onPrefClick(pref.name)}>{pref.name}</button>
+//             ))}
+//           </div>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
 
 const SelectDate = () => {
-  const date = new Date().getDate()
-  console.log(date)
+  const date = new Date().getDate();
+  console.log(date);
 
   return (
     <>
       <h3>日付を入力してください</h3>
       <input type="date" />
-
     </>
   );
 };
